@@ -10,7 +10,7 @@ http://34.244.19.210/
 
 ### Grader SSH Details
 
-The public key is located in this repo. You can SSH into the server using the below:
+The private key is provided as part of the project submission. You can SSH into the server using the below command:
 
 ```
 ssh -i <private_key> grader@34.244.19.210 -p 2200
@@ -29,7 +29,7 @@ And enter the private key passphrase
 3. Create a "grader" user and provide this user with sudo access.
 4. Create a public/private key pair (on local machine) for this user and add the public key to the lightsail authorized_keys file.
 5. Update all installed packages and change the SSH port from 22 to 2200 - Replicate this on the lightsail webapp.
-6. Created a snapshot of the instance
+6. Create a snapshot of the instance
 7. Implemented UFW settings restricting connections on the following ports: SSH (port 2200), HTTP (port 80), and NTP (port 123).
 
 ### Environment Set Up
@@ -109,9 +109,9 @@ And enter the private key passphrase
     application.secret_key = 'super_secret_key'
     ```
 ### Restart Apache
-    ```
-    sudo service apache2 restart
-    ```
+```
+sudo service apache2 restart
+```
 ## Third party software
 
 - Ubuntu        -   operating system
